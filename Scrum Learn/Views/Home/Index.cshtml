@@ -1,0 +1,234 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/scrum.css" />
+
+<body>
+    <div>
+        <canvas id="Scrum chart"></canvas>
+    </div>
+
+    <div>
+        <h1>Courage</h1>
+    </div>
+
+    <label class="container">
+        <span class="text">I work on the next highest priority Product Backlog Item (I do not cherry pick the work I pick up in the Sprint)</span>
+        <input type="checkbox" id="Courage" />
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">
+        <span class="text">If I see something that is wrong with what I'm being asked to do, I will say so.</span>
+        <input type="checkbox" id="Courage" />
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">
+        <span class="text">I will question & reproach my team members if I feel that they are doing something wrong.</span>
+        <input type="checkbox" id="Courage" />
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">
+        <span class="text">Regardless of the person talking, I will correct them if I believe that they are incorrect.</span>
+        <input type="checkbox" id="Courage" />
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">
+        <span class="text">Regardless of the person talking, I will correct them if I believe that they are incorrect.</span>
+        <input type="checkbox" id="Courage" />
+        <span class="checkmark"></span>
+    </label>
+
+
+    <div>
+        <h1>Focus</h1>
+    </div>
+    <label class="container">
+        <span class="text">Whilst working on a story I do not get distracted.</span>
+        <input type="checkbox" id="Focus" />
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">
+        <span class="text">If I am not enjoying the work in a story I still give it the attention it needs.</span>
+        <input type="checkbox" id="Focus" />
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">
+        <span class="text">When enjoying working on a story I will not over work a story just to prolong it.</span>
+        <input type="checkbox" id="Focus" />
+        <span class="checkmark"></span>
+    </label>
+
+    <label class="container">
+        <span class="text">I do not procrastinate when working on a story.</span>
+        <input type="checkbox" id="Focus" />
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">
+        <span class="text">As soon as the story is ready to move into a new state, I will tell my colleagues and either hand it over or ensure that they know it is ready to pick up.</span>
+        <input type="checkbox" id="Focus" />
+        <span class="checkmark"></span>
+    </label>
+
+
+    <div>
+        <h1>Openness</h1>
+    </div>
+    <label class="container">
+        <span class="text">I do not shy away from telling difficult news to team members and stakeholders</span>
+        <input type="checkbox" id="Openness" />
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">
+        <span class="text">I do not hide away difficult issues in the hope that they will sort themselves out.</span>
+        <input type="checkbox" id="Openness" />
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">
+        <span class="text">If something / someone is annoying me I will address it / tell them..</span>
+        <input type="checkbox" id="Openness" />
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">
+        <span class="text">My colleagues can judge what state of mind I'm in, I can share my feelings with my them..</span>
+        <input type="checkbox" id="Openness" />
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">
+        <span class="text">My colleagues can judge what state of mind I'm in, I can share my feelings with my them.</span>
+        <input type="checkbox" id="Openness" />
+        <span class="checkmark"></span>
+    </label>
+
+
+    <div>
+        <h1>Respect</h1>
+    </div>
+    <label class="container">
+        <span class="text">I listen with equal intensity regardless of who is talking.</span>
+        <input type="checkbox" id="Respect" />
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">
+        <span class="text">When listening to people I never talk over them.</span>
+        <input type="checkbox" id="Respect" />
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">
+        <span class="text">I value everyone's opinion equally.</span>
+        <input type="checkbox" id="Respect" />
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">
+        <span class="text">I am never concerned who works on what item in the backlog.</span>
+        <input type="checkbox" id="Respect" />
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">
+        <span class="text">I feel that my opinion is respected and that I have an equal say in the team.</span>
+        <input type="checkbox" id="Respect" />
+        <span class="checkmark"></span>
+    </label>
+
+
+    <div>
+        <h1>Commitment</h1>
+    </div>
+    <label class="container">
+        <span class="text">I always know what the sprint goal is and how my work supports it.</span>
+        <input type="checkbox" id="Commitment" />
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">
+        <span class="text">I do everything I can to ensure we achieve the goals of the sprint.</span>
+        <input type="checkbox" id="Commitment" />
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">
+        <span class="text">In my current team, I have never thought of taking a sick day to avoid going into work..</span>
+        <input type="checkbox" id="Commitment" />
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">
+        <span class="text">I always arrive on time for the events, my colleagues never have to wait for me to start the event.</span>
+        <input type="checkbox" id="Commitment" />
+        <span class="checkmark"></span>
+    </label>
+    <label class="container">
+        <span class="text">I know what it means to say that an item is done, i.e. I know the criteria that meets our Definition of Done.</span>
+        <input type="checkbox" id="Commitment" />
+        <span class="checkmark"></span>
+    </label>
+
+
+
+    <div>
+        <button id="button" class="btn-success" onclick="scrollToTop()">Submit</button>
+    </div>
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const ctx = document.getElementById('Scrum chart');
+        const myChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+            id:'scrumData',
+            labels: ['Courage', 'Focus', 'Openness', 'Respect', 'Commitment'],
+            datasets: [{
+                data: [0, 0, 0, 0, 0],
+                borderWidth: 5,
+            }]
+        },
+        options: {
+            scales: {
+                r: {
+                    beginAtZero: true,
+                    min: 0,
+                    max: 5,
+                    ticks: {
+                        stepSize:1,
+                    }
+                }
+            }
+        }
+    })
+
+    /// Function Sum
+    function countChecked(id) {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"][id="' + id + '"]');
+        let sum = 0;
+
+        checkboxes.forEach(function (checkbox) {
+            if (checkbox.checked) {
+                sum++;
+            }
+        });
+
+        console.log('Number of checked checkboxes with id ' + id + ':', sum); // check lỗi 
+        return sum;
+    }
+
+    document.getElementById('button').addEventListener('click', function () {
+        const sumCourage = countChecked('Courage');
+        const sumFocus = countChecked('Focus');
+        const sumOpenness = countChecked('Openness');
+        const sumRespect = countChecked('Respect')
+        const sumCommit = countChecked('Commitment')
+        myChart.data.datasets[0].data = [sumCourage, sumFocus, sumOpenness, sumRespect, sumCommit];
+        myChart.update();
+    });
+
+    function scrollToTop()
+    {
+        document.getElementById("Scrum chart").scrollIntoView({ behavior:"smooth" })
+    };
+
+</script>
+@Styles.Render("~/Content/css")
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.min.js" integrity="sha512-v3ygConQmvH0QehvQa6gSvTE2VdBZ6wkLOlmK7Mcy2mZ0ZF9saNbbk19QeaoTHdWIEiTlWmrwAL4hS8ElnGFbA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
