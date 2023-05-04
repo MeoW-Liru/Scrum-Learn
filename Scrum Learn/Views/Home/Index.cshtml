@@ -5,11 +5,16 @@
 }
 
 <link rel="stylesheet" href="~/Content/scrum.css" />
+<link rel="stylesheet" href="~/Content/button.css" />
+<header>
+    <h1 style="text-align:center">
+        SCRUM TEAM CHART
+    </h1>
+</header>
 
 <body>
-    <div>
-        <canvas id="Scrum chart"></canvas>
-    </div>
+
+
 
     <div>
         <h1>Courage</h1>
@@ -165,22 +170,31 @@
 
 
     <div>
-        <button id="button" class="btn-success" onclick="scrollToTop()">Submit</button>
+        <button id="button" onclick="scrollToTop()" class="btn-Custom btn-submit">Submit</button>
     </div>
+
+    <div id="hidden-chart" style="display:none;height:700px; width:700px">
+        <canvas id="Scrum chart">
+        </canvas>
+    </div>
+
 
 
 </body>
 
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 <script>
     const ctx = document.getElementById('Scrum chart');
-        const myChart = new Chart(ctx, {
+    const myChart = new Chart(ctx, {
         type: 'radar',
         data: {
-            id:'scrumData',
+            id: 'scrumData',
             labels: ['Courage', 'Focus', 'Openness', 'Respect', 'Commitment'],
             datasets: [{
+                label: 'Scrum Mark',
                 data: [0, 0, 0, 0, 0],
                 borderWidth: 5,
             }]
@@ -192,42 +206,60 @@
                     min: 0,
                     max: 5,
                     ticks: {
-                        stepSize:1,
+                        stepSize: 1,
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        font: {
+                            size: 30
+                        }
                     }
                 }
             }
         }
-    })
-
+    
+})
     /// Function Sum
     function countChecked(id) {
-        const checkboxes = document.querySelectorAll('input[type="checkbox"][id="' + id + '"]');
-        let sum = 0;
+const checkboxes = document.querySelectorAll('input[type="checkbox"][id="' + id + '"]');
+    let sum = 0;
 
-        checkboxes.forEach(function (checkbox) {
-            if (checkbox.checked) {
-                sum++;
-            }
-        });
-
-        console.log('Number of checked checkboxes with id ' + id + ':', sum); // check lỗi 
-        return sum;
+    checkboxes.forEach(function (checkbox) {
+    if (checkbox.checked) {
+        sum++;
     }
+});
+
+    console.log('Number of checked checkboxes with id ' + id + ':', sum); // check lỗi
+    return sum;
+}
 
     document.getElementById('button').addEventListener('click', function () {
-        const sumCourage = countChecked('Courage');
-        const sumFocus = countChecked('Focus');
-        const sumOpenness = countChecked('Openness');
-        const sumRespect = countChecked('Respect')
-        const sumCommit = countChecked('Commitment')
-        myChart.data.datasets[0].data = [sumCourage, sumFocus, sumOpenness, sumRespect, sumCommit];
-        myChart.update();
-    });
+const sumCourage = countChecked('Courage');
+    const sumFocus = countChecked('Focus');
+    const sumOpenness = countChecked('Openness');
+    const sumRespect = countChecked('Respect')
+    const sumCommit = countChecked('Commitment')
+    myChart.data.datasets[0].data = [sumCourage, sumFocus, sumOpenness, sumRespect, sumCommit];
+    myChart.update();
+});
 
-    function scrollToTop()
-    {
-        document.getElementById("Scrum chart").scrollIntoView({ behavior:"smooth" })
-    };
+    function scrollToTop() {
+    var div = document.getElementById("hidden-chart");
+    if (div.style.display === "none") {
+        div.style.display = "block";
+    document.getElementById("Scrum chart").scrollIntoView({behavior: "smooth" });
+} else {
+        div.style.display = "block";
+    document.getElementById("Scrum chart").scrollIntoView({behavior: "smooth" });
+}
+};
+
+
+
 
 </script>
 @Styles.Render("~/Content/css")
